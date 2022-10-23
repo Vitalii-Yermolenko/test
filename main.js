@@ -21,8 +21,13 @@ swowImg();
 
 stopBtn.addEventListener('click', () => {
     clearInterval(time);
+    time--;
+    console.log(time)
 })
 
 startBtn.addEventListener('click', () => {
-    swowImg();
+    if (time <= 1) {
+        swowImg();
+        console.log(time) 
+    }
 });
